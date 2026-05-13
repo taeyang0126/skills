@@ -23,6 +23,25 @@ rg -n "SCENE_ID|CARD|高风险" arthas-command-guide/references/arthas.md
 git status --short
 ```
 
+## 外部 Submodules
+
+| 目录 | 来源 | 说明 |
+|------|------|------|
+| `ClaudeFranzBFF/` | [franz1981/ClaudeFranzBFF](https://github.com/franz1981/ClaudeFranzBFF) | Linux 性能工程 skills & methodology（USE 方法论、mpstat/perf/wrk 分析） |
+
+### Submodule 常用操作
+
+```bash
+# 克隆仓库时一并拉取 submodule
+git clone --recurse-submodules <repo-url>
+
+# 已克隆后初始化 submodule
+git submodule init && git submodule update
+
+# 更新某个 submodule 到上游最新
+git submodule update --remote ClaudeFranzBFF
+```
+
 ## 维护原则
 
 - 行为规则写在 `SKILL.md`
